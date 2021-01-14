@@ -50,7 +50,7 @@
               if($result){
                   while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                     if($row["base_experience"] >= 200){
-                      echo"<tr><td>" ?><img src=<?php echo "sprites/" . $row["identifier"] . ".png"?>></div><?php "</td>";
+                      echo"<tr><td>" ?><img src=<?php echo "sprites/" . $row["identifier"] . ".png"?>><?php "</td>";
                       echo"<td class=super>" . $row["id"] . "</td>";
                       echo"<td class=super>" . $row["identifier"] . "</td>";
                       echo"<td class=super>" . $row["height"] . "</td>";
@@ -58,7 +58,7 @@
                       echo"<td class=super>" . $row["base_experience"] . "</td>";
 
                     }else{
-                    echo"<tr><td>" ?><div><img src=<?php echo "sprites/" . $row["identifier"] . ".png"?>></div><?php "</td>";
+                    echo"<tr><td>" ?><img src=<?php echo "sprites/" . $row["identifier"] . ".png"?>><?php "</td>";
                     echo"<td>" . $row["id"] . "</td>";
                     echo"<td>" . $row["identifier"] . "</td>";
                     echo"<td>" . $row["height"] . "</td>";
