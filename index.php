@@ -7,6 +7,23 @@
   </head>
   <body>
  <h1>My Pokedex</h1>
+ <?php $link = mysqli_connect("localhost", "root", "", "pokedex");
+
+   $req2 = "SELECT count(id) FROM pokemon";
+
+   $result = mysqli_query($link,$req2);
+   if($result){
+     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+       echo "<p>There are " . $row["count(id)"] . " pokemons from the database.</p>";
+
+
+     }
+   mysqli_free_result($result);
+}
+ mysqli_close($link);
+?>
+
+
     <table>
       <thead>
         <tr>
